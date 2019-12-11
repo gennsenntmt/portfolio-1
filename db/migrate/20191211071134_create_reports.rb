@@ -8,8 +8,8 @@ class CreateReports < ActiveRecord::Migration[5.2]
       t.integer     :day,             null: false
       t.integer     :subject,         null: false
       t.text        :other
-      t.references  :user,            foreign_key: true
-      t.reference   :student,         foreign_key: true
+      t.integer     :user,            foreign_key: true
+      t.integer     :student,         foreign_key: true
       t.timestamps
     end
   end
