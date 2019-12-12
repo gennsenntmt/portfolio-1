@@ -1,0 +1,102 @@
+.registration-container {
+  background-color: white;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  background: #a1d6f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+  border-radius: 8px;
+  position: relative;
+  color: white;
+}
+.user-information {
+  font-size: 34px;
+  letter-spacing: 4px;
+  margin: 40px 0 30px 0;
+  background: #a1d6f0;
+  padding: 4px;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  border-radius: 8px;
+  padding-top: 16px;
+}
+.name-field {
+  font-size: 24px;
+}
+#user_name {
+  height: 35px;
+  margin: 10px 0 30px 0;
+  padding: 6px;
+  font-size: 23px;
+}
+.password-field {
+  font-size: 24px;
+  margin: 20px 0 20px;
+}
+#user_password {
+  height: 35px;
+  margin: 10px 0 30px 0;
+  padding: 6px;
+  font-size: 23px;
+}
+.repassword-field {
+  font-size: 24px;
+  margin: 10px 0 30px;
+  font-size: 20px;
+}
+#user_password_confirmation {
+  height: 35px;
+  margin: 10px 0 30px 0;
+  padding: 6px;
+  font-size: 23px;
+}
+#actions-regist {
+  margin-top:10px;
+  padding-bottom: 30px;
+}
+.actions-regist {
+  border-radius: 10%;
+  box-shadow: 3px 3px 3px gray;
+  font-size: 24px;
+  letter-spacing: 2px;
+  width: 100px;
+}
+#actions-regist-login {
+  margin-top:10px;
+  padding-bottom: 30px;
+}
+.actions-regist-login {
+  border-radius: 10%;
+  box-shadow: 3px 3px 3px gray;
+  font-size: 20px;
+  letter-spacing: 2px;
+  width: 100px;
+  font-weight: normal;
+}
+.actions-regist-login:hover {
+  background-color:  rgb(97, 205, 216);
+  color: #adff7a;
+ }
+.actions-regist:hover {
+  background-color:  rgb(97, 205, 216);
+  color: #adff7a;
+ }
+
+ .sessions-link {
+   color: blue;
+   text-decoration: none;
+   font-size: 22px;
+   position: absolute;
+   top: 160px;
+   left: 120px;
+ }
+ .sign-up-link {
+  color: blue;
+  text-decoration: none;
+  font-size: 22px;
+  position: absolute;
+  top: 160px;
+  left: 120px;
+ }
+
