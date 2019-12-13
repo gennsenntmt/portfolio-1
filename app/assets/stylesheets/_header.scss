@@ -9,15 +9,25 @@
     flex-direction: row;
     justify-content: space-between;
     margin: 0 5% 0 10%;
-    &__days {
+    &__students {
       font-size: 16px;
       line-height: 80px;
+      text-decoration: none;
+      color: black;
+      &__new {
+        text-decoration: none;
+        color: black;
+        font-size:18px;
+        letter-spacing: 4px;
+        font-weight: bold;
+      }
     }
     &__title {
       font-size: 26px;
       line-height: 80px;
       letter-spacing: 5px;
       font-weight: bold;
+      padding-left: 120px;
     }
     &__list {
       display: flex;

@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get 'users/:id' => 'users#show'
   resources :reports
   resources :students
+
+  
 end
