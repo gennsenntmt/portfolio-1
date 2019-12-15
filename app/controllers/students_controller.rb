@@ -1,5 +1,12 @@
 class StudentsController < ApplicationController
+  def index
+  end
+
+  def show
+  end
+
   def new
+    @student = Student.new
   end
 
   def create
@@ -11,18 +18,24 @@ class StudentsController < ApplicationController
     end
   end
 
+  def edit
+  end
 
-  # private
+  def update
+  end
 
-  # def student_params
-  #   params.require(:student)
-  #           .permit(:description, :name, :price, :delivery_charged,
-  #                   :prefecture_id, :delivery_days, :sales_status, :delivery_way, 
-  #                   :category_id,
-  #                   :brand,
-  #                   :size_id,
-  #                   images_attributes: [:image, :id])
-  #         .merge(user_id: current_user.id)
-  # end
+  def destroy
+  end
+
+
+  private
+
+  def student_params
+    params.require(:student)
+            .permit(:first_name, :last_name, :grade, :english,
+                    :math, :japanese, :science, :social_studying
+                    )
+          # .merge(user_id: current_user.id)
+  end
 
 end
