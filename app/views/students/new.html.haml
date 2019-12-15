@@ -1,1 +1,28 @@
-ぴいい
+.student-registration-container 
+  %h2.student-information 生徒情報
+  = form_with model: @student, local: true do |s|
+    .student-name-field
+      名前
+      = s.text_field :name, class: "student-first_name", placeholder: "例)田中太郎",class: "student-name-field__fullname"
+    .grade-field
+      = s.label "学年", class:"grade-field__grade"
+      = s.select :grade, [['中学１年生', 1],['中学２年生', 2],['中学３年生', 3],['高校１年生', 4],['高校２年生', 5],['高校３年生', 6]],
+        {}, class: "grade_class"
+    .subject-title 受講科目(任意)
+    .subject-field
+      = s.check_box :english,{}
+      英語
+    .subject-field
+      = s.check_box :math,{}
+      数学
+    .subject-field
+      = s.check_box :japanese,{}
+      国語
+    .subject-field
+      = s.check_box :science,{}
+      理科
+    .subject-field
+      = s.check_box :social_studies,{}
+      社会
+    #student-regist
+      = s.submit "登録", class:"student-regist"
