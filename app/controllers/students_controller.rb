@@ -32,8 +32,8 @@ class StudentsController < ApplicationController
 
   def student_params
     params.require(:student)
-            .permit(:first_name, :last_name, :grade, :english,
-                    :math, :japanese, :science, :social_studying
+            .permit(:name, :grade, :english,
+                    :math, :japanese, :science, :social_studies
                     )
           # .merge(user_id: current_user.id)
   end
