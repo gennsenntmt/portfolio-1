@@ -3,17 +3,17 @@
   width: 40%;
   margin: 0 auto;
   text-align: center;
-  background: #a1d6f0;
+  background: #f4f6f7;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
   border-radius: 8px;
   position: relative;
-  color: white;
+  color: rgb(94, 91, 91);
 }
 .user-information {
   font-size: 34px;
   letter-spacing: 4px;
   margin: 40px 0 30px 0;
-  background: #a1d6f0;
+  background: #6cf7b6;
   padding: 4px;
   text-align: center;
   color: #FFF;
@@ -68,8 +68,8 @@
 }
 .actions-regist-login {
   border-radius: 10%;
-  box-shadow: 3px 3px 3px gray;
-  font-size: 20px;
+  box-shadow: 1px 1px 1px gray;
+  font-size: 16px;
   letter-spacing: 2px;
   width: 100px;
   font-weight: normal;
@@ -79,8 +79,8 @@
   color: #adff7a;
  }
 .actions-regist:hover {
-  background-color:  rgb(97, 205, 216);
-  color: #adff7a;
+  background-color:  #adff7a;
+  color: white;
  }
 
  .sessions-link {
@@ -99,4 +99,5 @@
   top: 160px;
   left: 120px;
  }
+
 
