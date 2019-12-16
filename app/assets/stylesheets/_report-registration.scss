@@ -1,11 +1,10 @@
 .report-registration-container {
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
 }
-
 .report-title {
   width: 25%;
-  margin: 2em auto 1em;
+  margin: 1em auto 0;
   text-align: center;
   padding: 0.5em 0.75em;
   font-weight: bold;
@@ -16,8 +15,56 @@
   letter-spacing: 0.5em;
 }
 .report-teacher {
-  width: 15%;
-  margin: 0 0 0 auto;
+  width: 20%;
+  margin: 0 0 1em auto;
   font-size: 22px;
   letter-spacing: 3px;
+}
+.form-box {
+  display: flex;
+  // justify-content: space-around;
+  // justify-content: space-between;
+  justify-content: center;
+}
+.choose-box1 {
+  width: 14%;
+  margin-right: 90px;
+  &__date {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 10px #f7ba69;
+    width: 100%;
+    margin: 0 0 2em 0;
+    height: 8vh;
+  }
+  &__subject {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 10px #f7ba69;
+    width: 100%;
+    margin: 2em 0;
+  }
+  &__name {
+  }
+}
+.choose-box2 {
+  width: 55%;
+}
+.choose-box3 {
+  width: 15%;
+  margin-right: 30px;
+  &__student {
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    color: #5d627b;
+    background: white;
+    border: double 5px #69d6ee;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    width: 100%;
+    border-radius: 5%;
+  }
 }
