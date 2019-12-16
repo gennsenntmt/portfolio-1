@@ -35,7 +35,6 @@ class StudentsController < ApplicationController
             .permit(:name, :grade, :english,
                     :math, :japanese, :science, :social_studies
                     )
-          # .merge(user_id: current_user.id)
   end
 
 end

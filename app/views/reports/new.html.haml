@@ -1,0 +1,8 @@
+.student-registration-container 
+  %h2.student-information 生徒情報
+  = form_with model: @report, local: true do |r|
+    #p.student-information__name 生徒を選んで下さい
+    = r.collection_select :student_id, @student_all, :id, :name, :prompt => "生徒を選択"
+
+    %br
+    = r.submit "登録", class:"student-regist"

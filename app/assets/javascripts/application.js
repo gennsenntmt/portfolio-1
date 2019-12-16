@@ -13,5 +13,5 @@
 //= require jquery
 //= require rails-ujs 
 //= require activestorage
-
+//= require select2
 //= require_tree .
