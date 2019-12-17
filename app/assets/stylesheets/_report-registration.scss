@@ -1,6 +1,7 @@
 .report-registration-container {
   width: 95%;
   margin: 0 auto;
+  
 }
 .report-title {
   width: 25%;
@@ -22,10 +23,10 @@
 }
 .form-box {
   display: flex;
-  justify-content: center;
+  margin-left: 5%;
 }
 .choose-box1 {
-  width: 14%;
+  width: 15%;
   margin-right: 90px;
   &__date {
     padding: 0.5em 1em;
@@ -42,6 +43,15 @@
     color: #232323;
     background: #fff8e8;
     border-left: solid 10px #f7ba69;
+    width: 100%;
+    margin: 2em 0;
+  }
+  &__student {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #ffe8fd;
+    border-left: solid 10px #d265f7;
     width: 100%;
     margin: 2em 0;
   }
@@ -62,13 +72,12 @@
 }
 
 .choose-box2 {
-  width: 50%;
-  padding: 0.5em 0.5em;
-  margin: 0 1em 0 0;
-  color: #5d627b;
-  background: white;
-  border-top: solid 5px #5d627b;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  width: 55%;
+  padding: 1em 0 1em 1em;
+  color: #232323;
+  background: #e9fefe;
+  border-left: solid 10px #3c89fc;
+  margin: 0 0 2em 0;
   &__container {
     margin: 0 auto;
     &__title {
@@ -129,31 +138,20 @@
     }
   }
 }
-.choose-box3 {
-  width: 15%;
-  margin-right: 30px;
-  &__student {
-    padding: 0.5em 0.75em 0.5em 2em;
-    margin: 1em 0;
-    color: #5d627b;
-    background: white;
-    border: double 5px #34ff85;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-    width: 100%;
-    border-radius: 5%;
-  }
-}
+// .choose-box3 {
+//   width: 15%;
+//   margin-right: 30px;
+ 
+// }
 .report-registration-btn {
-  margin: 20px 0 0 60px;
-  width: 13%;
-  border:solid 1px #ccc;
-  padding: 10px 20px;
-  font-family:Arial, sans-serif;
-  font-size:1.2em;
+  margin-right: 60px;
+  width: 10%;
+  letter-spacing: 2px;
+  font-size:1.5em;
   text-transform:uppercase;
-  font-weight:bold;
   color:#333;
   cursor:pointer;
   text-align: center;
   float: right;
+  border-radius: 10%;
 }

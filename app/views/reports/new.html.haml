@@ -13,6 +13,9 @@
         .choose-box1__subject 
           教科を選ぶ
           = r.select :subject, [['英語', 1],['数学', 2],['国語', 3],['理科', 4],['社会', 5]]
+        .choose-box1__student 
+          生徒を選ぶ
+          = r.collection_select :student_id, @student_all, :id, :name, :prompt => "生徒を選択"
       .choose-box2
         .choose-box2__container
           .choose-box2__container__title
@@ -29,8 +32,6 @@
             .choose-box2__container__other__contents 先生から一言
             = r.text_field :other, class: "choose-box2__container__other__input", placeholder: "例)よく理解できていました", size: 30
           
-      .choose-box3
-        .choose-box3__student 
-          生徒を選ぶ
-          = r.collection_select :student_id, @student_all, :id, :name, :prompt => "生徒を選択"
+      -# .choose-box3
+
        
