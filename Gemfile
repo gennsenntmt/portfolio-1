@@ -72,3 +72,4 @@ gem 'rails-i18n'
 gem 'jquery-rails'
 gem "gretel"
 gem 'enum_help' 
+gem 'select2-rails'

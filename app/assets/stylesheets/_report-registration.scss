@@ -1,0 +1,157 @@
+.report-registration-container {
+  width: 95%;
+  margin: 0 auto;
+  
+}
+.report-title {
+  width: 25%;
+  margin: 1em auto 0;
+  text-align: center;
+  padding: 0.5em 0.75em;
+  font-weight: bold;
+  color: #6091d3;
+  background: #FFF;
+  border: solid 3px #6091d3;
+  font-size: 22px;
+  letter-spacing: 0.5em;
+}
+.report-teacher {
+  width: 20%;
+  margin: 0 0 0 auto;
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+.form-box {
+  display: flex;
+  margin-left: 5%;
+}
+.choose-box1 {
+  width: 15%;
+  margin-right: 90px;
+  &__date {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #e8ffeb;
+    border-left: solid 10px #55fa3b;
+    width: 100%;
+    margin: 0 0 2em 0;
+  }
+  &__subject {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 10px #f7ba69;
+    width: 100%;
+    margin: 2em 0;
+  }
+  &__student {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #ffe8fd;
+    border-left: solid 10px #d265f7;
+    width: 100%;
+    margin: 2em 0;
+  }
+}
+#report_month_1i {
+  height: 24px;
+  margin-top: 5px;
+}
+#report_month_2i {
+  height: 24px;
+}
+#report_month_3i {
+  height: 24px;
+}
+#report_subject {
+  height: 30px;
+  margin: 6px;
+}
+
+.choose-box2 {
+  width: 55%;
+  padding: 1em 0 1em 1em;
+  color: #232323;
+  background: #e9fefe;
+  border-left: solid 10px #3c89fc;
+  margin: 0 0 2em 0;
+  &__container {
+    margin: 0 auto;
+    &__title {
+      margin: 10px 0;
+      &__contents {
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      &__input {
+        font-size: 22px;
+      }
+      &__input:focus {
+        outline: none;
+        border:solid 1px skyblue;  /* 枠線の色 */
+        background-color: rgb(252, 252, 234);  /* 背景色 */
+      }
+    }
+    &__description {
+      margin: 15px 0;
+      &__contents {
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      &__input:focus {
+        outline: none;
+        border-color: skyblue;   /* 枠線の色 */
+        background-color: rgb(252, 252, 234);  /* 背景色 */
+      }
+    }
+    &__homework {
+      margin: 10px 0;
+      &__contents {
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      &__input {
+      }
+      &__input:focus {
+        outline: none;
+        border-color: skyblue;   /* 枠線の色 */
+        background-color: rgb(252, 252, 234);  /* 背景色 */
+      }
+    }
+    &__other {
+      margin: 10px 0;
+      &__contents {
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      &__input {
+
+      }
+      &__input:focus {
+        outline: none;
+        border:solid 1px skyblue;  /* 枠線の色 */
+        background-color: rgb(252, 252, 234);  /* 背景色 */
+      }
+    }
+  }
+}
+// .choose-box3 {
+//   width: 15%;
+//   margin-right: 30px;
+ 
+// }
+.report-registration-btn {
+  margin-right: 60px;
+  width: 10%;
+  letter-spacing: 2px;
+  font-size:1.5em;
+  text-transform:uppercase;
+  color:#333;
+  cursor:pointer;
+  text-align: center;
+  float: right;
+  border-radius: 10%;
+}

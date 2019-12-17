@@ -10,11 +10,14 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require select2
  *= require_tree .
  *= require_self
+ 
  */
 
 @import "reset";
 @import "header";
 @import "registration-new";
 @import "student-registration";
+@import "report-registration";
