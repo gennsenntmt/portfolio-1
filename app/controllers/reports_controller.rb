@@ -8,7 +8,6 @@ class ReportsController < ApplicationController
   def new
     @report = Report.new
     @user = current_user
-    @user_id = current_user.id
     @student_all = Student.all
   end
 
@@ -36,7 +35,7 @@ class ReportsController < ApplicationController
   def report_params
     params.require(:report)
             .permit(:title, :description, :homework,
-                    :month, :day, :subject, :other, :student_id
+                    :day, :subject, :other, :student_id
                     )
           .merge(user_id: current_user.id)
   end
