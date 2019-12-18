@@ -1,5 +1,15 @@
 class ReportsController < ApplicationController
   def index
+    # @reports = Report.all.order("created_at DESC")
+    @students = Student.all.order("created_at DESC")
+
+    @q = Report.ransack(params[:q])
+    @reports = @q.result(distinct: true)
+  end
+
+  def search
+    @q = Report.search(search_params)
+    @reports = @q.result(distinct: true)
   end
 
   def show
@@ -38,5 +48,9 @@ class ReportsController < ApplicationController
                     :day, :subject, :other, :student_id
                     )
           .merge(user_id: current_user.id)
+  end
+
+  def search_params
+    params.require(:q).permit(:title_cont)
   end
 end

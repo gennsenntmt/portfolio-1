@@ -1,0 +1,33 @@
+en:
+  hello: "Hello world"
+  enums:
+    student:
+      english:
+        english_on: 英語
+        english_off: x
+      math:
+        math_on: 数学
+        math_off: x
+      japanse:
+        japanese_on: 国語
+        japanese_off: x
+      science:
+        science_on: 理科
+        science_off: x
+      social_studies:
+        social_studies_on: 社会
+        social_studies_off: x
+      grade:
+        j_first_grader:  中１
+        j_second_grader: 中２
+        j_third_grader:  中３
+        first_grader:    高１
+        second_grader:   高２
+        third_grader:    高３
+    report:
+      subject:
+        english:         英語
+        math:            数学
+        japanese:        国語
+        science:         理科
+        social_studies:  社会

@@ -10,19 +10,19 @@
         {}, class: "grade_class"
     .subject-title 受講科目(任意)
     .subject-field
-      = s.check_box :english,{}
+      = s.check_box :english,{}, "english_on", "english_off"
       英語
     .subject-field
-      = s.check_box :math,{}
+      = s.check_box :math,{}, "math_on", "math_off"
       数学
     .subject-field
-      = s.check_box :japanese,{}
+      = s.check_box :japanese,{}, "japanese", "false"
       国語
     .subject-field
-      = s.check_box :science,{}
+      = s.check_box :science,{}, "science", "false"
       理科
     .subject-field
-      = s.check_box :social_studies,{}
+      = s.check_box :social_studies,{}, "social_studies", "false"
       社会
     #student-regist
       = s.submit "登録", class:"student-regist"

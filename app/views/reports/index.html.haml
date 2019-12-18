@@ -1,0 +1,46 @@
+.main
+  報告書検索
+  %input#input-text{name: "title", placeholder:"主な内容", type: "text", value: ""}
+  #p 検索結果
+
+%table
+  %thead
+    %tr
+      %th 作成日
+      %th 主な内容
+      %th 教科
+      %th 先生
+      %th 生徒
+  - @reports.each do |report|
+    %tr
+      %td  
+        = report.day
+      %td 
+        = report.title
+      %td  
+        = report.subject_i18n
+      %td
+        = report.user.name 
+      %td  
+        = report.student.name
+        
+-# .main
+-#   報告書検索
+-#   = search_form_for(@q, url:search_path) do |f|
+-#     = f.label :title_cont, '主な内容'
+-#     = f.search_field :title_cont
+-#     = f.submit
+
+-#   %table
+-#     - @reports.each do |report|
+-#       %tr 
+-#         %td  
+-#           = report.day
+-#         %td  
+-#           = report.title
+-#         %td  
+-#           = report.subject_i18n
+-#         %td
+-#           = report.user.name 
+-#         %td  
+-#           = report.student.name

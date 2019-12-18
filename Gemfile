@@ -73,3 +73,4 @@ gem 'jquery-rails'
 gem "gretel"
 gem 'enum_help' 
 gem 'select2-rails'
+gem 'ransack'
