@@ -15,7 +15,7 @@ class ReportsController < ApplicationController
   def show
     @report = Report.find(params[:id])
     @user = current_user
-    @student_all = Student.all
+    @student_all = Student.student_all
   end
 
   def new
