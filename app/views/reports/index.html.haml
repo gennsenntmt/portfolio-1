@@ -1,8 +1,9 @@
 .main
   報告書検索
   %input#input-text{name: "title", placeholder:"主な内容", type: "text", value: ""}
+  = "全報告書数:#{@result}件"
   #p 検索結果
-
+  
 %table.main-table
   %thead
     %tr
