@@ -3,14 +3,16 @@
   %input#input-text{name: "title", placeholder:"主な内容", type: "text", value: ""}
   #p 検索結果
 
-%table
+%table.main-table
   %thead
     %tr
       %th 作成日
       %th 主な内容
       %th 教科
       %th 先生
-      %th 生徒
+      %th 生徒名
+      %th 学年
+      %th 詳細
   - @reports.each do |report|
     %tr
       %td  
@@ -23,6 +25,11 @@
         = report.user.name 
       %td  
         = report.student.name
+      %td  
+        = report.student.grade_i18n
+      %td
+        = link_to "詳細", report_path(report), class: "sign-in-btn" 
+ 
         
 -# .main
 -#   報告書検索

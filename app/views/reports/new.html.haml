@@ -12,7 +12,8 @@
           = r.date_select :day, use_month_numbers: true,end_year: Time.now.year
         .choose-box1__subject 
           教科を選ぶ
-          = r.select :subject, [['英語', 1],['数学', 2],['国語', 3],['理科', 4],['社会', 5]]
+          = r.select :subject, Report.subjects.keys.map {|k| [I18n.t("enums.report.subject.#{k}"), k]}
+          -# = r.select :subject, [['英語', 1],['数学', 2],['国語', 3],['理科', 4],['社会', 5]]
         .choose-box1__student 
           生徒を選ぶ
           = r.collection_select :student_id, @student_all, :id, :name, :prompt => "生徒を選択"

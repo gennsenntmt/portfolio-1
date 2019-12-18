@@ -13,6 +13,7 @@ class ReportsController < ApplicationController
   end
 
   def show
+    @report = Report.find(params[:id])
   end
 
   def new
@@ -22,6 +23,7 @@ class ReportsController < ApplicationController
   end
 
   def create
+    
     @report = Report.new(report_params)
     if @report.save
       redirect_to root_path
@@ -44,8 +46,7 @@ class ReportsController < ApplicationController
 
   def report_params
     params.require(:report)
-            .permit(:title, :description, :homework,
-                    :day, :subject, :other, :student_id
+            .permit(:title, :description, :homework,:day, :subject, :other, :student_id
                     )
           .merge(user_id: current_user.id)
   end
