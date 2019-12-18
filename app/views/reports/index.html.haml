@@ -1,54 +1,39 @@
 .main
-  報告書検索
-  %input#input-text{name: "title", placeholder:"主な内容", type: "text", value: ""}
-  = "全報告書数:#{@result}件"
-  #p 検索結果
+  .main__top
+    .main__top__text
+      報告書検索(半角スペース 複数条件検索可)
+    %input#input-text{name: "title", placeholder:"例)英語 田中", type: "text", value: ""}
+      .main__top__search
+        = "全報告書数:#{@result}件"
+    
   
-%table.main-table
-  %thead
-    %tr
-      %th 作成日
-      %th 主な内容
-      %th 教科
-      %th 先生
-      %th 生徒名
-      %th 学年
-      %th 詳細
-  - @reports.each do |report|
-    %tr
-      %td  
-        = report.day
-      %td 
-        = report.title
-      %td  
-        = report.subject_i18n
-      %td
-        = report.user.name 
-      %td  
-        = report.student.name
-      %td  
-        = report.student.grade_i18n
-      %td
-        = link_to "詳細", report_path(report), class: "sign-in-btn" 
- 
-        
--# .main
--#   報告書検索
--#   = search_form_for(@q, url:search_path) do |f|
--#     = f.label :title_cont, '主な内容'
--#     = f.search_field :title_cont
--#     = f.submit
-
--#   %table
--#     - @reports.each do |report|
--#       %tr 
--#         %td  
--#           = report.day
--#         %td  
--#           = report.title
--#         %td  
--#           = report.subject_i18n
--#         %td
--#           = report.user.name 
--#         %td  
--#           = report.student.name
+  %table.main-table
+    %thead
+      %tr
+        %th.th-date  作成日
+        %th.th-title 主な内容
+        %th.th-subject 教科
+        %th.th-teacher 先生
+        %th.th-student 生徒名
+        %th.th-grade 学年
+        %th.th-show 詳細
+        -# %th 塾長確認
+    - @reports.each do |report|
+      %tr
+        %td.td-date 
+          = report.day
+        %td.td-title 
+          = report.title
+        %td.td-subject 
+          = report.subject_i18n
+        %td.td-teacher
+          = report.user.name 
+        %td.td-student  
+          = report.student.name
+        %td.td-grade  
+          = report.student.grade_i18n
+        %td.td-show
+          = link_to "詳細", report_path(report), class: "sign-in-btn"
+        -# %td 
+        -# %td
+        -#   %input{:type => "checkbox"}/

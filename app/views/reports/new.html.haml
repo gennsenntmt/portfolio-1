@@ -2,8 +2,7 @@
   .report-title 
     生徒指導報告書
   .report-teacher
-    担任: 
-    = current_user.name
+    作成:#{current_user.name}先生
   = form_with model: @report, local: true do |r|
     .form-box
       .choose-box1

@@ -1,12 +1,11 @@
 .header
   .header__container 
-    .header__container__students
-      =link_to "生徒の登録", new_student_path, class: "header__container__students__new"
-    - if user_signed_in?
-      .header__container__current_user
-        ログイン中: #{current_user.name}
-      .header__container__create-report
-        =link_to "報告書作成",new_user_report_path(current_user), class: "header__container__create-report"
+    .header__container__left
+      .header__container__left__students
+        =link_to "生徒登録", new_student_path, class: "header__container__left__students__new"
+      - if user_signed_in?
+        .header__container__left__create-report
+          =link_to "報告書作成",new_user_report_path(current_user), class: "header__container__create-report"
     .header__container__title
       学習報告アプリ
     %ul.header__container__list
@@ -16,8 +15,7 @@
         %li.header__container__list__students
           =link_to "担当生徒", root_path, class: ""
         %li.header__container__list__my-page
-          =link_to "users/#{current_user.id}", class: "" do
-            マイページ
+          =link_to "マイページ", user_path(current_user), class: "" 
         %li.header__container__list__log-out
           =link_to "ログアウト", destroy_user_session_path, method: :delete
       - else
@@ -27,23 +25,3 @@
           =link_to "講師登録", new_user_registration_path, class: "post" 
         %li.header__container__list__sign-in
           =link_to "ログイン", new_user_session_path, class: "post"
-
-  -#       =link_to '/', class:"" 
-  -#     %form.search-form{:action => "/jp/search/"}
-  -#       %input{:name => "keyword", :placeholder => "何かお探しですか？", :type => "search", :class => "search-box"}
-  -#         .search-icon= fa_icon 'search' 
-  -#   .header__container__bottom
-  -#     .header__container__bottom__left
-  -#       .header__container__bottom__left__category
-  -#         =link_to '/', class: "" do
-  -#           カテゴリーから探す
-  -#           =fa_icon 'list-ul'
-  -#       .header__container__bottom__left__bland
-  -#         =link_to '/', class: ""
-  -#     .header__container__bottom__right
-  -#       - if user_signed_in?
-  -#       - else
-  -#         .header__container__bottom__right__sign-up
-  -#           =link_to "新規会員登録", new_user_registration_path, class: "" 
-  -#         .header__container__bottom__right__sign-in
-  -#           =link_to "ログイン", new_user_session_path, class: "" 

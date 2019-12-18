@@ -4,9 +4,9 @@
 }
 .report-title {
   width: 20%;
-  margin: 1em auto 0;
+  margin-left: 37%;
   text-align: center;
-  padding: 0.5em 0.75em;
+  padding: 0.25em 0.5em;
   font-weight: bold;
   color: #6091d3;
   background: #FFF;
@@ -15,9 +15,9 @@
   letter-spacing: 0.5em;
 }
 .report-teacher {
-  width: 20%;
+  width: 30%;
   margin: 0 0 0 auto;
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: 3px;
 }
 .form-box {
@@ -72,11 +72,11 @@
 
 .choose-box2 {
   width: 55%;
-  padding: 1em 0 1em 1em;
+  padding: 1em 0 0 1em;
   color: #232323;
   background: #e9fefe;
   border-left: solid 10px #3c89fc;
-  margin: 0 0 2em 0;
+  margin: 0 0 1em 0;
   &__container {
     margin: 0 auto;
     &__title {
