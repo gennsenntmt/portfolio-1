@@ -7,6 +7,34 @@
     }
   }
 }
+.main__top__search {
+  text-align: right;
+}
+// タブ
+.main__right-news-todo {
+  width: 75%;
+  margin: 15px auto 0;
+  .news-todo-tab{
+    height: 30px;
+    width: 12%;
+    float: left;
+    
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    color: gray;
+    border:solid 1px rgb(90, 237, 50);  
+    background-color: rgb(171, 249, 171);
+    border-radius: 4px 4px 0 0 ;
+    }
+    .btn:hover{
+      opacity: 0.5;
+    }
+}
+.border-red-1{
+  height: 2.5px;
+  background-color: rgb(255, 77, 0);
+}
 
 #input-text {
   font: 15px/24px sans-serif;
@@ -25,8 +53,8 @@
 	box-shadow: 0 0 5px 1px rgba(60, 218, 118, 0.5);
 }
 
-table{
-  width: 70%;
+.main-table{
+  width: 75%;
   border-collapse:separate;
   border-spacing: 0;
   margin: 0 auto;
@@ -45,7 +73,6 @@ table th{
   border-left: 1px solid #5fc2f5;
   border-top: 1px solid #3c6690;
   border-bottom: 1px solid #3c6690;
-  // box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
   padding: 10px 0px;
   letter-spacing: 2px;
   font-weight: bold;
@@ -67,6 +94,66 @@ table tr:last-child td:first-child {
 table tr:last-child td:last-child {
   border-radius: 0 0 5px 0;
 }
+.th-date {
+  width: 14%;
+}
+.th-title {
+  width: 30%;
+}
+.th-subject {
+  width: 7%;
+}
+.th-teacher {
+  width: 19%;
+}
+.th-student {
+  width: 19%;
+}
+.th-grade {
+  width: 7%;
+}
+.th-show {
+  width: 8%;
+}
+
+.td-date {
+  width: 13%;
+}
+.td-title {
+  width: 29%;
+}
+.td-subject {
+  width: 6%;
+}
+.td-teacher {
+  width: 18%;
+}
+.td-student {
+  width: 18%;
+}
+.td-grade {
+  width: 6%;
+}
+.td-show {
+  width: 8%;
+}
+.main-student-table{
+  width: 75%;
+  border-collapse:separate;
+  border-spacing: 0;
+  margin: 0 auto;
+}
+.main-student-table th{
+  text-align: center;
+  color:white;
+  background: linear-gradient(#e4d1b4,#fc5770);
+  border-left: 1px solid #fc5770;
+  border-bottom: 1px solid #f5875f;
+  padding: 10px 0px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
 .th-date {
   width: 14%;
 }
