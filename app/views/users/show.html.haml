@@ -1,2 +1,33 @@
-.title
-  @name
+.main
+  .main__top
+    .main__top__text
+      自分が作成した報告書から検索(半角スペース 複数条件検索可)
+    %input#input-text{name: "title", placeholder:"主な内容", type: "text", value: ""}
+      .main__top__search
+        = "自分が作成した報告書件数:#{@result}件"
+%table.main-table
+  %thead
+    %tr
+      %th 作成日
+      %th 主な内容
+      %th 教科
+      %th 先生
+      %th 生徒名
+      %th 学年
+      %th 詳細
+  - @reports.each do |report|
+    %tr
+      %td  
+        = report.day
+      %td 
+        = report.title
+      %td  
+        = report.subject_i18n
+      %td
+        = report.user.name 
+      %td  
+        = report.student.name
+      %td  
+        = report.student.grade_i18n
+      %td
+        = link_to "詳細", report_path(report), class: "sign-in-btn" 

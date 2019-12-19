@@ -1,3 +1,11 @@
 $(function(){
-  $('#input-text').quicksearch('table tbody tr');
+  $('#input-text').quicksearch('table tbody tr',{
+    
+  });
 });
+// $(function(){
+//   $('table').jTableCheckbox({
+   
+// });
+// });
+

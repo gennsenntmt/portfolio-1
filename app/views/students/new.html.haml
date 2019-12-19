@@ -8,7 +8,7 @@
       = s.label "学年", class:"grade-field__grade"
       = s.select :grade, Student.grades.keys.map {|k| [I18n.t("enums.student.grade.#{k}"), k]},
         {}, class: "grade_class"
-    .subject-title 受講科目(任意)
+    .subject-title 受講科目(見込可)
     .subject-field
       = s.check_box :english,{}, "english_on", "english_off"
       英語

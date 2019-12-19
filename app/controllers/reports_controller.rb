@@ -7,10 +7,10 @@ class ReportsController < ApplicationController
     # @reports = @q.result(distinct: true)
   end
 
-  def search
-    @q = Report.search(search_params)
-    @reports = @q.result(distinct: true)
-  end
+  # def search
+  #   @q = Report.search(search_params)
+  #   @reports = @q.result(distinct: true)
+  # end
 
   def show
     @report = Report.find(params[:id])

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @name = current_user.name
+    @reports = Report.where(user_id: current_user.id).order("created_at DESC")
+    @result = Report.where(user_id: current_user.id).length
   end
 end

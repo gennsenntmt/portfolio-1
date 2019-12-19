@@ -2,8 +2,7 @@
   .report-title 
     生徒指導報告書
   .report-teacher
-    担任: 
-    = @report.user.name
+    作成:#{@report.user.name}先生
   = form_with model: @report, local: true do |r|
     .form-box
       .choose-box1
@@ -13,7 +12,6 @@
         .choose-box1__subject 
           教科を選ぶ
           = r.select :subject, Report.subjects.keys.map {|k| [I18n.t("enums.report.subject.#{k}"), k]}
-          -# = r.select :subject, [['英語', 1],['数学', 2],['国語', 3],['理科', 4],['社会', 5]]
         .choose-box1__student 
           生徒を選ぶ
           = r.collection_select :student_id, @student_all, :id, :name, :prompt => "生徒を選択"
