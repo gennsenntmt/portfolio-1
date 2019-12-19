@@ -12,8 +12,8 @@
       - if user_signed_in?
         %li.header__container__list__top 
           =link_to "Top", root_path, class: ""
-        %li.header__container__list__students
-          =link_to "担当生徒", root_path, class: ""
+        -# %li.header__container__list__students
+        -#   =link_to "担当生徒", root_path, class: ""
         %li.header__container__list__my-page
           =link_to "マイページ", user_path(current_user), class: "" 
         %li.header__container__list__log-out

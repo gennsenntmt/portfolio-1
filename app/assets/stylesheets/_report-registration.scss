@@ -11,7 +11,7 @@
   color: #6091d3;
   background: #FFF;
   border: solid 3px #6091d3;
-  font-size: 22px;
+  font-size: 20px;
   letter-spacing: 0.5em;
 }
 .report-teacher {
@@ -87,11 +87,14 @@
       }
       &__input {
         font-size: 22px;
+        border: 1px solid #1b2538;
+        border-radius: 4px;
+        outline: none;
       }
       &__input:focus {
         outline: none;
-        border:solid 1px skyblue;  /* 枠線の色 */
-        background-color: rgb(252, 252, 234);  /* 背景色 */
+        border:solid 1px rgb(50, 184, 237);  
+        background-color: rgb(252, 252, 234); 
       }
     }
     &__description {
@@ -100,10 +103,15 @@
         font-weight: bold;
         letter-spacing: 2px;
       }
+      &__input {
+        outline: none;
+        border: 1px solid #1b2538;
+        border-radius: 4px;
+      }
       &__input:focus {
         outline: none;
-        border-color: skyblue;   /* 枠線の色 */
-        background-color: rgb(252, 252, 234);  /* 背景色 */
+        border:solid 1px rgb(50, 184, 237);  
+        background-color: rgb(252, 252, 234);  
       }
     }
     &__homework {
@@ -113,10 +121,13 @@
         letter-spacing: 2px;
       }
       &__input {
+        outline: none;
+        border: 1px solid #1b2538;
+        border-radius: 4px;
       }
       &__input:focus {
         outline: none;
-        border-color: skyblue;   /* 枠線の色 */
+        border-color: rgb(50, 184, 237);   /* 枠線の色 */
         background-color: rgb(252, 252, 234);  /* 背景色 */
       }
     }
@@ -127,11 +138,13 @@
         letter-spacing: 2px;
       }
       &__input {
-
+        outline: none;
+        border: 1px solid #1b2538;
+        border-radius: 4px;
       }
       &__input:focus {
         outline: none;
-        border:solid 1px skyblue;  /* 枠線の色 */
+        border:solid 1px rgb(50, 184, 237);  /* 枠線の色 */
         background-color: rgb(252, 252, 234);  /* 背景色 */
       }
       &__btns {

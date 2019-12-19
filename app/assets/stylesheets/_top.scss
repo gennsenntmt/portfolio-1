@@ -1,12 +1,13 @@
 .main {
   &__top {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     &__search {
       text-align: right;
     }
   }
 }
+
 #input-text {
   font: 15px/24px sans-serif;
 	box-sizing: border-box;
@@ -41,7 +42,7 @@ table th{
   text-align: center;
   color:white;
   background: linear-gradient(#ace4e3,#3ee3f5);
-  // border-left: 1px solid #5fc2f5;
+  border-left: 1px solid #5fc2f5;
   border-top: 1px solid #3c6690;
   border-bottom: 1px solid #3c6690;
   // box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
