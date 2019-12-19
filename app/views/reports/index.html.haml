@@ -58,7 +58,7 @@
         %th.th-japanese 国語
         %th.th-science 理科
         %th.th-social_studies 社会
-        %th.th-show 一覧
+        %th.th-show 編集/一覧
     - @students.each do |student|
       %tr
         %td.td-date
@@ -78,6 +78,6 @@
         %td.td-social_studies
           = student.social_studies_i18n
         %td.td-show
-          = link_to "報告一覧", student_path(student), class: "sign-in-btn" 
+          = link_to "編集/一覧", student_path(student), class: "sign-in-btn" 
         -# %td
         -#   %input{:type => "checkbox"}/

@@ -6,6 +6,9 @@
       text-align: right;
     }
   }
+  &__body {
+    display: flex;
+  }
 }
 .main__top__search {
   text-align: right;
@@ -94,27 +97,27 @@ table tr:last-child td:first-child {
 table tr:last-child td:last-child {
   border-radius: 0 0 5px 0;
 }
-.th-date {
-  width: 14%;
-}
-.th-title {
-  width: 30%;
-}
-.th-subject {
-  width: 7%;
-}
-.th-teacher {
-  width: 19%;
-}
-.th-student {
-  width: 19%;
-}
-.th-grade {
-  width: 7%;
-}
-.th-show {
-  width: 8%;
-}
+// .th-date {
+//   width: 14%;
+// }
+// .th-title {
+//   width: 30%;
+// }
+// .th-subject {
+//   width: 7%;
+// }
+// .th-teacher {
+//   width: 19%;
+// }
+// .th-student {
+//   width: 19%;
+// }
+// .th-grade {
+//   width: 7%;
+// }
+// .th-show {
+//   width: 8%;
+// }
 
 .td-date {
   width: 13%;
