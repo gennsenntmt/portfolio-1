@@ -5,6 +5,8 @@
     %input#input-text{name: "title", placeholder:"例)英語 田中", type: "text", value: ""}
       .main__top__search
         = "全報告書数:#{@result}件"
+  .main__right-news-todo
+    
   %table.main-table
     %thead
       %tr
@@ -31,7 +33,6 @@
         %td.td-grade  
           = report.student.grade_i18n
         %td.td-show
-          = link_to "詳細", report_path(report), class: "sign-in-btn"
-        -# %td 
+          = link_to "詳細", report_path(report), class: "sign-in-btn" 
         -# %td
         -#   %input{:type => "checkbox"}/

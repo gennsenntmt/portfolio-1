@@ -18,5 +18,8 @@ class Student < ApplicationRecord
     second_grader:           5, #高２
     third_grader:            6, #高３
   },_prefix: true
+
+  validates :name, uniqueness: true, presence: true, length: { maximum: 10 }
+  validates :grade, presence: true
 end
 
