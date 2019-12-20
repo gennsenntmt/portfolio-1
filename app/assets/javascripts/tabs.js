@@ -1,13 +1,13 @@
 $(function()  {
-  let tabs = $(".news-todo-tab");
+  let tabs = $(".main__tabs-tab");
   function tabSwitch() {
     $(".active-1").removeClass("active-1");
     $(this).addClass("active-1");
     const index = tabs.index(this);
     $(".content-1").removeClass("show-1").eq(index).fadeIn().addClass("show-1");
     $(".content-1").addClass("hide-1").eq(index).fadeIn().removeClass("hide-1");
-    $(".border-red-1").removeClass("line-up-1").eq(index).addClass("line-up-1");
-    $(".border-red-1").addClass("line-down-1").eq(index).removeClass("line-down-1");
+    $(".border-1").removeClass("line-up-1").eq(index).addClass("line-up-1");
+    $(".border-1").addClass("line-down-1").eq(index).removeClass("line-down-1");
     $(".main__top__search").removeClass("result-up-1").eq(index).fadeIn().addClass("result-up-1");
     $(".main__top__search").addClass("result-down-1").eq(index).fadeIn().removeClass("result-down-1");
     $('.show-1').show();

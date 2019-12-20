@@ -3,15 +3,15 @@
     .main__top__text
       報告書検索(半角スペース 複数条件検索可)
     %input#input-text{name: "title", placeholder:"例)英語 田中", type: "text", value: ""}
-  .main__right-news-todo
+  .main__tabs
     .link-tab
-      =link_to "javascript:void(0)", class: "news-todo-tab btn active-1" do
-        .border-red-1.line-up-1
+      =link_to "javascript:void(0)", class: "main__tabs-tab btn active-1" do
+        .border-1.line-up-1
         %p.news-title
           報告書一覧
     .link-tab
-      =link_to "javascript:void(0)", class: "news-todo-tab btn" do
-        .border-red-1.line-down-1
+      =link_to "javascript:void(0)", class: "main__tabs-tab btn" do
+        .border-1.line-down-1
         %p.news-title
           生徒一覧
     .main__top__search.result-up-1
