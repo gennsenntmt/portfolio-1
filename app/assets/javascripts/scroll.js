@@ -2,7 +2,7 @@ $(function(){
   $('table').scrolltable({
     // stripe: true,
     // oddClass: 'odd',
-    maxHeight: 380
+    maxHeight: 360
   });
 
   

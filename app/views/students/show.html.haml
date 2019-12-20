@@ -37,6 +37,7 @@
   %table.main-table
     %thead
       %tr
+        %th.th-principal 塾長確認
         %th 作成日
         %th 主な内容
         %th 教科
@@ -46,6 +47,8 @@
         %th 詳細
     - @reports.each do |report|
       %tr
+        %td.td-principal
+          = report.principal_i18n
         %td  
           = report.day
         %td 

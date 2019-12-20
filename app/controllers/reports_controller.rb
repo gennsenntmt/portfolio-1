@@ -1,9 +1,12 @@
 class ReportsController < ApplicationController
+  before_action :move_to_top, except: :index
+
   def index
     @reports = Report.all.order("created_at DESC")
     @students = Student.all.order("created_at DESC")
     @result = Report.all.length
     @result_student = Student.all.length
+    @user = current_user
     # @q = Report.ransack(params[:q])
     # @reports = @q.result(distinct: true)
   end
@@ -61,9 +64,14 @@ class ReportsController < ApplicationController
 
   def report_params
     params.require(:report)
-            .permit(:title, :description, :homework,:day, :subject, :other, :student_id
+            .permit(:title, :description, :homework,:day, :subject, :other, 
+                    :student_id, :principal
                     )
           .merge(user_id: current_user.id)
+  end
+
+  def move_to_top
+    redirect_to root_path unless user_signed_in?
   end
 
   # def search_params

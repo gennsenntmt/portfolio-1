@@ -1,13 +1,20 @@
 .main
   .main__top
     .main__top__text
-      自分が作成した報告書から検索(半角スペース 複数条件検索可)
+      -if current_user.admin?
+        '#{@user.name}'の報告書一覧から検索
+      -elsif user_signed_in? 
+        '#{@user.name}'先生の報告書一覧から検索
     %input#input-text{name: "title", placeholder:"主な内容", type: "text", value: ""}
       .main__top__search
-        = "自分が作成した報告書件数:#{@result}件"
+        -if current_user.admin?
+          = "'#{@user.name}'の報告書件数:#{@result}件"
+        -elsif user_signed_in?  
+          = "'#{@user.name}'先生の報告書件数:#{@result}件"
 %table.main-table
   %thead
     %tr
+      %th.th-principal 塾長確認
       %th 作成日
       %th 主な内容
       %th 教科
@@ -17,6 +24,8 @@
       %th 詳細
   - @reports.each do |report|
     %tr
+      %td.td-principal
+        = report.principal_i18n
       %td  
         = report.day
       %td 

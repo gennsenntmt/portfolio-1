@@ -7,20 +7,30 @@
     .link-tab
       =link_to "javascript:void(0)", class: "main__tabs-tab btn active-1" do
         .border-1.line-up-1
-        %p.news-title
+        %p.tab-title
           報告書一覧
     .link-tab
       =link_to "javascript:void(0)", class: "main__tabs-tab btn" do
         .border-1.line-down-1
-        %p.news-title
+        %p.tab-title
           生徒一覧
-    .main__top__search.result-up-1
-      = "全報告書数:#{@result}件"
-    .main__top__search.result-down-1
-      = "全生徒数:#{@result_student}件"
+      -# わざと全角スペースを使用しています
+      .main__top__search.result-up-1
+        %span.pink ピンク：塾長確認「済」
+        　　
+        %span.yellow イエロー：塾長確認「要修正」
+        　　　　　　　　　　
+        全報告書数:#{@result}件
+      .main__top__search.result-down-1
+        %span.skyblue ブルー ：受講中
+        　　　　　　
+        全生徒数:#{@result_student}件
   %table.main-table.content-1.show-1
     %thead
       %tr
+        %th.th-principal 
+          塾長
+          %br 確認
         %th.th-date  作成日
         %th.th-title 主な内容
         %th.th-subject 教科
@@ -28,9 +38,11 @@
         %th.th-student 生徒名
         %th.th-grade 学年
         %th.th-show 詳細
-        -# %th 塾長確認
+        
     - @reports.each do |report|
       %tr
+        %td.td-principal
+          = report.principal_i18n
         %td.td-date 
           = report.day
         %td.td-title 
@@ -44,9 +56,8 @@
         %td.td-grade  
           = report.student.grade_i18n
         %td.td-show
-          = link_to "詳細", report_path(report), class: "sign-in-btn" 
-        -# %td
-        -#   %input{:type => "checkbox"}/
+          = link_to "詳細", report_path(report), class: "show-btn" 
+        
   %table.main-student-table.content-1.hide-1
     %thead
       %tr

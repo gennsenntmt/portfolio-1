@@ -31,3 +31,8 @@ en:
         japanese:        国語
         science:         理科
         social_studies:  社会
+      principal:
+        unconfirmed:     未了
+        checked:         済
+        correct:         要修正
+  

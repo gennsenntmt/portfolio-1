@@ -2,7 +2,10 @@
   .report-title 
     生徒指導報告書
   .report-teacher
-    作成:#{current_user.name}先生
+    -if user_signed_in? && current_user.admin?
+      作成:#{current_user.name}
+    -elsif user_signed_in?
+      作成:#{current_user.name}先生
   = form_with model: @report, local: true do |r|
     .form-box
       .choose-box1
