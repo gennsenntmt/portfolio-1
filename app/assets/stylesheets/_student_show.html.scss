@@ -1,0 +1,101 @@
+.editmain {
+  &__top {
+    width: 70%;
+    margin-left: 25%;
+    &__search {
+      text-align: right;
+    }
+  }
+  &__body {
+    display: flex;
+  }
+}
+.editmain__top__search {
+  text-align: right;
+}
+
+
+.main__body {
+  display: flex;
+  &__student {
+    background-color: white;
+    width: 15%;
+    margin: 0 auto;
+    text-align: center;
+    background: #f4f6f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+    border-radius: 8px;
+    position: relative;
+    color: rgb(94, 91, 91);
+    &__edit {
+      font-size: 20px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      background: #6cf7b6;
+      padding: 2px;
+      text-align: center;
+      color: #FFF;
+      font-weight: bold;
+      border-radius: 6px;
+      
+    }
+  }
+}
+.student-editname-field {
+  font-size: 18px;
+  &__fullname {
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 80%;
+  padding: 0.3em;
+  transition: 0.3s;
+  letter-spacing: 1px;
+  color: black;
+  border: 1.4px solid #1b2538;
+  border-radius: 4px;
+  }
+  &__fullname:focus {
+    border: 1.4px solid #3cda90;
+    outline: none;
+    box-shadow: 0 0 5px 1px rgba(60, 218, 118, 0.5);
+  }
+}
+.editgrade-field {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.editgrade_class {
+  padding: 18px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  width: 40%;
+  height: 40px;
+  background-color: white;
+  outline: none;
+}
+.editgrade_class:hover {
+  border: 1.5px solid #3cda90;
+  outline: none;
+}
+.editsubject-title {
+  margin-top: 15px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.editsubject-field {
+  font-size: 20px;
+  margin: 5px 0 0 0;
+}
+.editstudent-regist {
+  margin: 10px 0;
+  border-radius: 10%;
+  box-shadow: 2px 3px 4px gray;
+  font-size: 18px;
+  letter-spacing: 2px;
+  width: 30%;
+}
+.editstudent-regist:hover {
+ background-color:#6ef9b8;
+ color: white;
+ outline: none;
+}

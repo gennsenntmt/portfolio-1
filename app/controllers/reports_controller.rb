@@ -3,6 +3,7 @@ class ReportsController < ApplicationController
     @reports = Report.all.order("created_at DESC")
     @students = Student.all.order("created_at DESC")
     @result = Report.all.length
+    @result_student = Student.all.length
     # @q = Report.ransack(params[:q])
     # @reports = @q.result(distinct: true)
   end

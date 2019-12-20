@@ -3,19 +3,19 @@ en:
   enums:
     student:
       english:
-        english_on: 英語
+        english_on: ◯
         english_off: x
       math:
-        math_on: 数学
+        math_on: ◯
         math_off: x
-      japanse:
-        japanese_on: 国語
+      japanese:
+        japanese_on: ◯
         japanese_off: x
       science:
-        science_on: 理科
+        science_on: ◯
         science_off: x
       social_studies:
-        social_studies_on: 社会
+        social_studies_on: ◯
         social_studies_off: x
       grade:
         j_first_grader:  中１
