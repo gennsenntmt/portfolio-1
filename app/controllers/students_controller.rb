@@ -1,4 +1,6 @@
 class StudentsController < ApplicationController
+  before_action :move_to_top
+
   def index
   end
 
@@ -28,6 +30,7 @@ class StudentsController < ApplicationController
 
   def update
     @student = Student.find(params[:id])
+    @user = current_user
     if @student.update(student_params) 
       redirect_to root_path
     else       
@@ -46,6 +49,10 @@ class StudentsController < ApplicationController
             .permit(:name, :grade, :english,
                     :math, :japanese, :science, :social_studies
                     )
+  end
+
+  def move_to_top
+    redirect_to root_path unless user_signed_in?
   end
 
 end

@@ -54,7 +54,18 @@
     width: 100%;
     margin: 2em 0;
   }
+  &__principal {
+    padding: 0.5em 1em;
+    margin: 3em 0 0;
+    color: #6091d3;
+    background: #e4fcff;
+    border-left: solid 10px #1dc1d6;
+    width: 100%;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+    font-size: 18px;
+  }
 }
+
 #report_month_1i {
   height: 24px;
   margin-top: 5px;
@@ -68,6 +79,12 @@
 #report_subject {
   height: 30px;
   margin: 6px;
+}
+#report_principal {
+  width: 80%;
+  outline: none;
+  height: 30px;
+  margin: 10px auto 5px;
 }
 
 .choose-box2 {
@@ -200,3 +217,4 @@
   color: #fff;
   background-color:  rgb(0, 149, 238);
 }
+

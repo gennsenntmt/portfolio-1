@@ -10,6 +10,12 @@ class Report < ApplicationRecord
     social_studies:   5, #社会
   },_prefix: true
 
+  enum principal:{
+    unconfirmed:     0, #未確認
+    checked:         1, #確認済
+    correct:         2, #要修正
+  },_prefix: true
+
   validates :title, presence: true, length: { maximum: 15 }
   validates :description, presence: true, length: { maximum: 420 }
   validates :homework, presence: true, length: { maximum: 80 }

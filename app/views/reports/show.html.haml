@@ -15,6 +15,10 @@
         .choose-box1__student 
           生徒を選ぶ
           = r.collection_select :student_id, @student_all, :id, :name, :prompt => "生徒を選択"
+        .choose-box1__principal 
+          塾長確認(塾長専用)
+          - if current_user.admin?
+            = r.select :principal, Report.principals.keys.map {|k| [I18n.t("enums.report.principal.#{k}"), k]}, class:"choose-box1__principal__box"
       .choose-box2
         .choose-box2__container
           .choose-box2__container__title
@@ -30,7 +34,7 @@
             .choose-box2__container__other__contents 先生から一言
             = r.text_field :other, class: "choose-box2__container__other__input", placeholder: "例)よく理解できていました", size: 30
             .choose-box2__container__other__btns
-              -if user_signed_in? && current_user.id == @report.user.id
+              -if user_signed_in? && current_user.id == @report.user.id || user_signed_in? && current_user.admin?
                 = r.submit "編集", class:"report-registration-btn"
                 = link_to '削除', "/users/#{current_user.id}/reports/#{@report.id}", method: :delete, data: {confirm: "報告書を削除します。よろしいですか？"},class:"report-registration-btn-delete"
       
