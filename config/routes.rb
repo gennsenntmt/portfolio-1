@@ -9,10 +9,12 @@ Rails.application.routes.draw do
   get 'users/:id' => 'users#show'
   get 'search', to: 'reports#search'
   
+  
   resources :users do 
     resources :reports
   end
 
   resources :students 
   resources :reports
+
 end

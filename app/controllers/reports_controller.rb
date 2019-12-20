@@ -42,7 +42,7 @@ class ReportsController < ApplicationController
 
   def update
     @report = Report.find(params[:id])
-    if @report.update(report_params) 
+    if @report.update(report_admin_params) 
       redirect_to root_path
     else       
       redirect_to report_path(@report)
@@ -68,6 +68,13 @@ class ReportsController < ApplicationController
                     :student_id, :principal
                     )
           .merge(user_id: current_user.id)
+  end
+
+  def report_admin_params
+    params.require(:report)
+            .permit(:title, :description, :homework,:day, :subject, :other, 
+                    :student_id, :principal
+                    )
   end
 
   def move_to_login
