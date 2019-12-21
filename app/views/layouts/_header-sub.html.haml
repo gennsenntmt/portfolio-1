@@ -1,8 +1,14 @@
 .header-sub
-  -unless user_signed_in?
-    ログインして下さい
-  -if user_signed_in? && current_user.admin?
-    ログイン中: ’#{current_user.name}’
-  -elsif user_signed_in? 
-    ログイン中: ’#{current_user.name}’先生
+  .header-sub__user
+    - unless user_signed_in?
+      『ログインして下さい』
+    - if user_signed_in? && current_user.admin?
+      ログイン中: ’#{current_user.name}’
+      = link_to :back,class:"header-sub__user__a" do
+        %button.header-sub__user__a__btn 戻る
+    - elsif user_signed_in? 
+      ログイン中: ’#{current_user.name}’先生
+      = link_to :back,class:"header-sub__user__a" do
+        %button.header-sub__user__a__btn 戻る
+ 
     

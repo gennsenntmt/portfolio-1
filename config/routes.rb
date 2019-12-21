@@ -11,10 +11,10 @@ Rails.application.routes.draw do
   
   
   resources :users do 
-    resources :reports
+    resources :reports, only: [:new,:create] 
   end
 
-  resources :students 
+  resources :students , only: [:show,:new,:create,:edit,:update,:destroy]
   resources :reports
 
 end
