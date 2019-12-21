@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-  before_action :move_to_top, except: :index
+  before_action :move_to_login, except: :index
 
   def index
     @reports = Report.all.order("created_at DESC")
@@ -42,7 +42,7 @@ class ReportsController < ApplicationController
 
   def update
     @report = Report.find(params[:id])
-    if @report.update(report_params) 
+    if @report.update(report_admin_params) 
       redirect_to root_path
     else       
       redirect_to report_path(@report)
@@ -70,8 +70,15 @@ class ReportsController < ApplicationController
           .merge(user_id: current_user.id)
   end
 
-  def move_to_top
-    redirect_to root_path unless user_signed_in?
+  def report_admin_params
+    params.require(:report)
+            .permit(:title, :description, :homework,:day, :subject, :other, 
+                    :student_id, :principal
+                    )
+  end
+
+  def move_to_login
+    redirect_to new_user_session_path unless user_signed_in?
   end
 
   # def search_params

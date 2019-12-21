@@ -15,7 +15,6 @@
         .choose-box1__subject 
           教科を選ぶ
           = r.select :subject, Report.subjects.keys.map {|k| [I18n.t("enums.report.subject.#{k}"), k]}
-          -# = r.select :subject, [['英語', 1],['数学', 2],['国語', 3],['理科', 4],['社会', 5]]
         .choose-box1__student 
           生徒を選ぶ
           = r.collection_select :student_id, @student_all, :id, :name, :prompt => "生徒を選択"
@@ -26,7 +25,10 @@
             = r.text_field :title, class: "choose-box2__title__input", placeholder: "例)現在進行形",class: "choose-box2__container__title__input"
           .choose-box2__container__description
             .choose-box2__container__description__contents 学習内容
-            = r.text_area :description, class: "choose-box2__container__description__input", placeholder: "例)学習した内容を記載してください", size: "70x6"
+            = r.text_area :description, class: "choose-box2__container__description__input", placeholder: "例)学習した内容を記載してください 最大420字", size: "70x6"
+            .choose-box2__container__description__contents__count 
+              入力文字数:
+              %span.showCnt 0
           .choose-box2__container__homework
             .choose-box2__container__homework__contents 宿題
             = r.text_area :homework, class: "choose-box2__container__homework__input", placeholder: "例)◯◯問題集 Pxx~Pxx", size: "40x2"
@@ -36,13 +38,3 @@
             .choose-box2__container__other__btns
               = r.submit "登録", class:"report-registration-btn"
               = link_to '戻る', root_path, class:"report-registration-btn-delete"
-     
-
-          -# .choose-box2__container__other
-          -#   .choose-box2__container__other__contents 先生から一言
-          -#   = r.text_field :other, class: "choose-box2__container__other__input", placeholder: "例)よく理解できていました", size: 30
-          -#   .choose-box2__container__other__btns
-          -#     -if user_signed_in? && current_user.id == @report.user_id
-          -#       = r.submit "編集", class:"report-registration-btn"
-          -#       = link_to '削除', "/users/#{current_user.id}/reports/#{@report.id}", method: :delete, data: {confirm: "報告書を削除します。よろしいですか？"},class:"report-registration-btn-delete"
-      

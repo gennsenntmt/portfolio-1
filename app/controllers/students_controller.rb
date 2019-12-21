@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :move_to_top
+  before_action :move_to_login
 
   def index
   end
@@ -51,8 +51,8 @@ class StudentsController < ApplicationController
                     )
   end
 
-  def move_to_top
-    redirect_to root_path unless user_signed_in?
+  def move_to_login
+    redirect_to new_user_session_path unless user_signed_in?
   end
 
 end
