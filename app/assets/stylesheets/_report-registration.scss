@@ -15,10 +15,13 @@
   letter-spacing: 0.5em;
 }
 .report-teacher {
-  width: 30%;
-  margin: 0 0 0 auto;
+  width: 80%;
+  text-align: right;
   font-size: 18px;
   letter-spacing: 3px;
+}
+.need {
+  color: red;
 }
 .form-box {
   display: flex;

@@ -29,6 +29,7 @@ class ReportsController < ApplicationController
   end
 
   def create
+    @student_all = Student.all
     @report = Report.new(report_params)
     if @report.save
       redirect_to root_path
@@ -85,3 +86,4 @@ class ReportsController < ApplicationController
   #   params.require(:q).permit(:title_cont)
   # end
 end
+
