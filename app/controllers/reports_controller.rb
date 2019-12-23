@@ -7,14 +7,7 @@ class ReportsController < ApplicationController
     @result = Report.all.length
     @result_student = Student.all.length
     @user = current_user
-    # @q = Report.ransack(params[:q])
-    # @reports = @q.result(distinct: true)
   end
-
-  # def search
-  #   @q = Report.search(search_params)
-  #   @reports = @q.result(distinct: true)
-  # end
 
   def show
     @report = Report.find(params[:id])
@@ -82,8 +75,5 @@ class ReportsController < ApplicationController
     redirect_to new_user_session_path unless user_signed_in?
   end
 
-  # def search_params
-  #   params.require(:q).permit(:title_cont)
-  # end
 end
 

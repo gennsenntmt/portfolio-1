@@ -8,7 +8,6 @@ class Student < ApplicationRecord
   enum japanese: { japanese_on: true, japanese_off: false }
   enum science: { science_on: true, science_off: false }
   enum social_studies: { social_studies_on: true, social_studies_off: false }
-  # validates :english, inclusion: {in: ["english_on", "english_off"]}
 
   enum grade:{
     j_first_grader:          1, #中１
