@@ -37,3 +37,4 @@ $(function()  {
     $('.result-down-1').hide()
   })
 });
+
