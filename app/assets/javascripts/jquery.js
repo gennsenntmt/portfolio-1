@@ -3,11 +3,3 @@ $(function(){
     
   });
 });
-// $(function(){
-//   $('table').jTableCheckbox({
-   
-// });
-// });
-
-
-
