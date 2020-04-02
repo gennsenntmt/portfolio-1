@@ -1,4 +1,6 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  # 誰からメールが来る？
+  default from: 'noreply.taka@gmail.com'
   layout 'mailer'
 end
+
