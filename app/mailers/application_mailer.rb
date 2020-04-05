@@ -1,6 +1,7 @@
 class ApplicationMailer < ActionMailer::Base
   # 誰からメールが来る？
-  default from: 'noreply.taka@gmail.com'
+  # ここは偽物を一応登録
+  default from: 'aaaa@gmail.com'
   layout 'mailer'
 end
 
