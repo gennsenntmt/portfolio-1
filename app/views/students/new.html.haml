@@ -2,7 +2,7 @@
   %h2.student-information 生徒情報
   = form_with model: @student, local: true do |s|
     .student-name-field
-      名前
+      = s.label "名前"
       = s.text_field :name, class: "student-first_name", placeholder: "例)田中太郎",class: "student-name-field__fullname"
     .grade-field
       = s.label "学年", class:"grade-field__grade"
